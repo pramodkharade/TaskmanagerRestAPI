@@ -7,10 +7,20 @@ mongoClient.connect(connectionURL,{ useNewUrlParser:true},(error,client)=>{
         return console.log('Unable to connect database');
     }
     const db = client.db(databaseName);
-    db.collection('users').insertOne({
-        name:'Pramod Kharade',
-        age:30
+    // db.collection('users').insertOne({
+    //     name:'Pramod Kharade',
+    //     age:30
+    // });
+    db.collection('users')
+    .insertMany([
+        {name:'Shital Bari',age:29}
+        ,{name:'Kishor Vitekar',age:30}
+    ],(error,result)=>{
+        if(error){
+            return console.log('unable to insert Users..!');
+        }
     });
+    
     
     console.log('connected correctly');
 });
