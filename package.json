@@ -1,0 +1,26 @@
+{
+  "name": "TaskmanagerRestAPI",
+  "version": "1.0.0",
+  "description": "Task Management with mongodb,nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pramodkharade/TaskmanagerRestAPI.git"
+  },
+  "keywords": [],
+  "author": "Pramod Kharade",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pramodkharade/TaskmanagerRestAPI/issues"
+  },
+  "homepage": "https://github.com/pramodkharade/TaskmanagerRestAPI#readme",
+  "dependencies": {
+    "@types/express": "^4.17.0",
+    "@types/mongodb": "^3.1.28",
+    "express": "^4.17.1",
+    "mongodb": "^3.2.7"
+  }
+}
