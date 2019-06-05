@@ -11,14 +11,25 @@ mongoClient.connect(connectionURL,{ useNewUrlParser:true},(error,client)=>{
     //     name:'Pramod Kharade',
     //     age:30
     // });
-    db.collection('users')
+    // db.collection('users')
+    // .insertMany([
+    //     {name:'Shital Bari',age:29}
+    //     ,{name:'Kishor Vitekar',age:30}
+    // ],(error,result)=>{
+    //     if(error){
+    //         return console.log('unable to insert Users..!');
+    //     }
+    // });
+    db.collection('tasks')
     .insertMany([
-        {name:'Shital Bari',age:29}
-        ,{name:'Kishor Vitekar',age:30}
+        {description:'Clanning the house',completed:true},
+        {description:'Pot to plants',completed:false},
+        {description:'Servicing the Bike',completed:false}
     ],(error,result)=>{
         if(error){
-            return console.log('unable to insert Users..!');
+            return console.log('unable to insert tasks..!');
         }
+        console.log(result.ops);
     });
     
     
