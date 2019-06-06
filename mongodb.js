@@ -8,23 +8,17 @@ MongoClient.connect(connectionURL,{ useNewUrlParser:true},(error,client)=>{
     }
     const db = client.db(databaseName);
     
-    db.collection('users').findOne({_id: new ObjectID("5cf7a76e6ff0a27c8c1ced5b")},(error,user)=>{
-        if(error){
-            return console.log('Unable to find user');
+  const updatePromise =  db.collection('users').updateOne({_id: new ObjectID("5cf7a76e6ff0a27c8c1ced5b")},{
+        $set:{
+            name:'Vasant Kharade'
         }
-        console.log(user);
     });
-    db.collection('users').find({ age:30}).toArray((error,users)=>{
-        if(error){
-            return console.log('Unable to find users');
-        }
-        console.log(users);
+    updatePromise.then((result)=>{
+        console.log(result);
     });
-    db.collection('users').find({ age:30}).count((error,count)=>{
-        if(error){
-            return console.log('Unable to find users count');
-        }
-        console.log(count);
+    updatePromise.catch((error)=>{
+        console.log(error);
     });
+    
     // console.log('connected correctly');
 });
