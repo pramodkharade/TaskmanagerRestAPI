@@ -8,15 +8,13 @@ MongoClient.connect(connectionURL,{ useNewUrlParser:true},(error,client)=>{
     }
     const db = client.db(databaseName);
     
-  const updatePromise =  db.collection('users').updateOne({_id: new ObjectID("5cf7a76e6ff0a27c8c1ced5b")},{
-        $set:{
-            name:'Vasant Kharade'
+  db.collection('users').updateOne({_id: new ObjectID("5cf7a76e6ff0a27c8c1ced5b")},{
+        $inc:{
+            age:-3
         }
-    });
-    updatePromise.then((result)=>{
+    }).then((result)=>{
         console.log(result);
-    });
-    updatePromise.catch((error)=>{
+    }).catch((error)=>{
         console.log(error);
     });
     
