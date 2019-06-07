@@ -9,12 +9,10 @@ app.post('/users',(req,res)=>{
     const user = new User(req.body);
     user.save()
         .then(()=>{
-            res.send(user);
-            console.log(user);
+            res.status(200).send(user);
         })
         .catch((error)=>{
-            res.send(error);
-            console.log('Error is: ',error);
+            res.status(400).send(error);
         });
     
 });
