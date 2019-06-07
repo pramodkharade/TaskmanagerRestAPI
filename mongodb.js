@@ -8,11 +8,9 @@ MongoClient.connect(connectionURL,{ useNewUrlParser:true},(error,client)=>{
     }
     const db = client.db(databaseName);
     
-  db.collection('users').updateOne({_id: new ObjectID("5cf7a76e6ff0a27c8c1ced5b")},{
-        $inc:{
-            age:-3
-        }
-    }).then((result)=>{
+  db.collection('users')
+  .deleteMany({age:27})
+  .then((result)=>{
         console.log(result);
     }).catch((error)=>{
         console.log(error);
