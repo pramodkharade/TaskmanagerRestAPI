@@ -50,31 +50,34 @@ const me  = new User({
     password:'Pramod@1234'
 });
 
-me.save()
-  .then(()=>{
-      console.log('Result is: ',me);
-  })
-  .catch((error)=>{
-    console.log('error is: ',error);
-  });
+// me.save()
+//   .then(()=>{
+//       console.log('Result is: ',me);
+//   })
+//   .catch((error)=>{
+//     console.log('error is: ',error);
+//   });
 
   const Task = mongoose.model('Task',{
       description:{
-          type:String
+          type:String,
+          require:true,
+          trim:true
       },
       completed:{
-          type:Boolean
+          type:Boolean,
+          default:false
       }
   });
 const task = new Task({
-    description:" Cleaning the code",
-    completed:false
+    description:" Revap the regisration flow ",
+    
 });
 
-// task.save()
-// .then((taskResult)=>{
-//  console.log('Task is:',taskResult);
-// })
-// .catch((error)=>{
-//     console.log('error',error);
-// });
+task.save()
+.then((taskResult)=>{
+ console.log('Task is:',taskResult);
+})
+.catch((error)=>{
+    console.log('error',error);
+});
