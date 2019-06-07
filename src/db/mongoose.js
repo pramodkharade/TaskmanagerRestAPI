@@ -6,25 +6,31 @@ mongoose.connect('mongodb://127.0.0.1:27017/task-manager-api',
                     });
 const User = mongoose.model('User',{
     name:{
-        type:String
+        type:String,
+        require:true
     },
     age:{
-        type:Number
+        type:Number,
+        validate(value){
+            if(value < 0){
+                throw new Error('Age must be postive number');
+            }
+        }
     }
 });
 
-// const me  = new User({
-//     name:'Pramod Kharade',
-//     age:30
-// });
+const me  = new User({
+    name:'Vishal',
+    age:27
+});
 
-// me.save()
-//   .then(()=>{
-//       console.log('Result is: ',me);
-//   })
-//   .catch((error)=>{
-//     console.log('error is: ',error);
-//   });
+me.save()
+  .then(()=>{
+      console.log('Result is: ',me);
+  })
+  .catch((error)=>{
+    console.log('error is: ',error);
+  });
 
   const Task = mongoose.model('Task',{
       description:{
@@ -39,10 +45,10 @@ const task = new Task({
     completed:false
 });
 
-task.save()
-.then((taskResult)=>{
- console.log('Task is:',taskResult);
-})
-.catch((error)=>{
-    console.log('error',error);
-});
+// task.save()
+// .then((taskResult)=>{
+//  console.log('Task is:',taskResult);
+// })
+// .catch((error)=>{
+//     console.log('error',error);
+// });
