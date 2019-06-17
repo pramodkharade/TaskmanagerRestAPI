@@ -17,7 +17,15 @@ app.post('/users',(req,res)=>{
         });
     
 });
-
+app.get('/users',(req,res)=>{
+    User.find({}).then(
+        (users)=>{
+            res.status(200).send(users);
+        }
+    ).catch((error)=>{
+        res.status(500).send(error);
+    });
+});
 app.post('/tasks',(req,res)=>{
     const task = new Task(req.body);
     task.save().then(()=>{
