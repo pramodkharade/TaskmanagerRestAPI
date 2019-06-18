@@ -19,10 +19,12 @@
   },
   "homepage": "https://github.com/pramodkharade/TaskmanagerRestAPI#readme",
   "dependencies": {
+    "@types/bcrypt": "^3.0.0",
     "@types/express": "^4.17.0",
     "@types/mongodb": "^3.1.28",
     "@types/mongoose": "^5.3.16",
     "@types/validator": "^10.11.0",
+    "bcrypt": "^3.0.6",
     "express": "^4.16.4",
     "mongodb": "^3.2.7",
     "mongoose": "^5.3.16",
