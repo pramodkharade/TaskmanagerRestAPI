@@ -24,7 +24,11 @@ npm i nodemon@1.18.9 --save-dev
 #express
 
 npm i express@4.16.4
+
 #Password Encryption
+
 npm i bcrypt
+
 #JWT
+
 npm i jsonwebtoken@8.4.0
