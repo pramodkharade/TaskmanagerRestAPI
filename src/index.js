@@ -24,3 +24,14 @@ app.use(taskRouter);
 app.listen(port, () => {
     console.log('Server is running on :', port);
 });
+
+/*********
+ * // get task id with user details
+const Task = require('./models/task');
+const main = async () =>{
+    const task = await Task.findById('5d0b55c84f3ced53a5e52855');
+    await task.populate('owner').execPopulate();
+    console.log(task);
+}
+main(); *****/
+
