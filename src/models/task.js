@@ -14,7 +14,7 @@ const Task = mongoose.model('Task',{
     owner:{
         type:mongoose.Schema.Types.ObjectId,
         require:true,
-        ref:'User'
+        ref:'User'// mapping task with user
     }
 });
 
