@@ -47,6 +47,8 @@ const userSchema = new mongoose.Schema({
             require:true
         }
     }]
+},{
+    timestamps:true
 });
 /***Mapping user with task**/
 userSchema.virtual('tasks',{
