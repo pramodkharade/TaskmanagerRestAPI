@@ -34,4 +34,9 @@ npm i bcrypt
 npm i jsonwebtoken@8.4.0
 
 #file Upload Library
+
 npm i multer@1.4.1
+
+#Resize the profile Image:
+
+npm i sharp
