@@ -34,7 +34,9 @@ const main = async () =>{
     console.log(task);
 }
 main(); *****/
-
+/******
+ *  get task by user ID
+ * **
 const Task = require('./models/task');
 const User = require('./models/user');
 const main = async () =>{
@@ -42,4 +44,4 @@ const main = async () =>{
     await user.populate('tasks').execPopulate();
     console.log(user.tasks);
 }
-main();
+main(); */
