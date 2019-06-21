@@ -40,3 +40,7 @@ npm i multer@1.4.1
 #Resize the profile Image:
 
 npm i sharp
+
+#Email service SendGrid
+
+npm i @sendgrid/mail@6.3.1
