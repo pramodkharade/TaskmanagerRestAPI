@@ -32,3 +32,6 @@ npm i bcrypt
 #JWT
 
 npm i jsonwebtoken@8.4.0
+
+#file Upload Library
+npm i multer@1.4.1
