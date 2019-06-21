@@ -108,7 +108,17 @@ router.delete('/users/me',auth,async(req,res)=>{
     }
 });
 const upload = multer({
-    dest:'avatars'
+    dest:'avatars',
+    limits:{
+        fileSize:1000000
+    },
+    fileFilter(req,file,cb){
+        ///!file.originalname.endsWith('.pdf')
+        if(!file.originalname.match(/\.(png|jpeg|jpg)$/)){
+           return cb(new Error('Please Upload a image '));
+        }
+        cb(undefined,true);
+    }
 });
 router.post('/users/me/avatar',upload.single('avatar'),(req,res)=>{
     res.send('uploaded');
