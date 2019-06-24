@@ -29,6 +29,7 @@
     "@types/sharp": "^0.22.2",
     "@types/validator": "^10.11.0",
     "bcrypt": "^3.0.6",
+    "env-cmd": "^8.0.2",
     "express": "^4.16.4",
     "jsonwebtoken": "^8.4.0",
     "mongodb": "^3.2.7",
