@@ -49,4 +49,4 @@ npm i @sendgrid/mail@6.3.1
 # To env and const with configuration
 
 
-npm i env-cmd
+npm i env-cmd --save-dev
