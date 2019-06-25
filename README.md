@@ -21,27 +21,33 @@ delete /tasks/:id
 
 # nodemon
 npm i nodemon@1.18.9 --save-dev
-#express
+
+# express
+
 
 npm i express@4.16.4
 
-#Password Encryption
+# Password Encryption
+
 
 npm i bcrypt
 
-#JWT
+# JWT
 
 npm i jsonwebtoken@8.4.0
 
-#file Upload Library
+# file Upload Library
+
 
 npm i multer@1.4.1
 
-#Resize the profile Image:
+
+# Resize the profile Image:
 
 npm i sharp
 
-#Email service SendGrid
+# Email service SendGrid
+
 
 npm i @sendgrid/mail@6.3.1
 
